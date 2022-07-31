@@ -1,11 +1,9 @@
 
-import RightComponent from '../Components/RightComponent'
-import UnsolvedPost from '../Components/unsolvedPosts'
-import SolvedPost from '../Components/solvedPost'
-import AllPost from '../Components/AllPost'
-import FilterPost from '../Components/filterPost'
-import PostForm from '../Components/postForm'
-import Hilight from '../Components/Hilight'
+import RightComponent from '../Components/Sidebar/RightComponent'
+import AllPost from '../Components/PostType/AllPost'
+import FilterPost from '../Components/Filter/filterPost'
+import PostForm from '../Components/Post/postForm'
+import Hilight from '../Components/TopTrend/Hilight'
 
 import { useState, useEffect } from 'react'
 
@@ -38,10 +36,10 @@ const Forum = () => {
 function selectedFilter (filter){
     console.log('filter=',filter)
     if(filter==1)
-        return(<UnsolvedPost/>)
+        return(<div></div>)
     
     if(filter==2)
-        return(<SolvedPost/>)
+        return(<div></div>)
     
     if(filter==3)
         return(<AllPost/>)

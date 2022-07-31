@@ -6,10 +6,8 @@ import './Css/UnsolvedPosts.css'
 import './Css/SolvedPosts.css'
 import './Css/UserSidebar.css'
 import './Css/Forum.css'
-import SolvedPosts from './Components/solvedPost'
-import UnsolvedPosts from './Components/unsolvedPosts'
-import SignUp from './Components/signUp'
-import SignIn from './Components/signIn'
+import SignUp from './Components/Registration/signUp'
+import SignIn from './Components/Registration/signIn'
 import Forum from './Pages/forum'
 import { Route, Routes } from 'react-router-dom';
 import NavBars from './Components/NavBar/NavBars'
@@ -24,8 +22,6 @@ const App = () => {
             <Route exact path="/forum" element={<Forum/>} />
             <Route exact path="/signUp" element={<SignUp/>} />
             <Route exact path="/signIn" element={<SignIn/>} />
-            <Route exact path="/solvedPost" element={<SolvedPosts/>} />
-            <Route exact path="/posts" element={<UnsolvedPosts/>} />
         </Routes>
       </div>
     );

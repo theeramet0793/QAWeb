@@ -1,4 +1,4 @@
-import '../Css/FilterPost.css'
+import '../../Css/FilterPost.css'
 import { useEffect,useState } from "react";
 
 const FilterPost = ({setFilter}) => {

@@ -1,13 +1,13 @@
 import { useState } from "react";
-import Comment from "./Comment/comment";
-import AddComment from "./Comment/AddComment";
+import Comment from "../Comment/comment";
+import AddComment from "../Comment/AddComment";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CountComment from './PostFooter/CountComment'
-import SortComment from "./PostFooter/SortComment";
-import FollowPost from "./PostFooter/FollowPost";
-import HideComment from "./PostFooter/HideComment";
-import PostHeader from "./PostHeader/PostHeader"
+import CountComment from '../PostFooter/CountComment'
+import SortComment from "../PostFooter/SortComment";
+import FollowPost from "../PostFooter/FollowPost";
+import HideComment from "../PostFooter/HideComment";
+import PostHeader from "../PostHeader/PostHeader"
 
 
 const Post = (prop) => {
