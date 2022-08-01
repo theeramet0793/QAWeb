@@ -1,9 +1,9 @@
 
-import RightComponent from '../Components/Sidebar/RightComponent'
-import AllPost from '../Components/PostType/AllPost'
-import FilterPost from '../Components/Filter/filterPost'
-import PostForm from '../Components/Post/postForm'
-import Hilight from '../Components/TopTrend/Hilight'
+import RightComponent from '../Sidebar/RightComponent'
+import AllPost from '../PostType/AllPost'
+import FilterPost from '../Filter/FilterPost'
+import PostForm from '../Post/PostForm'
+import Hilight from '../TopTrend/Hilight'
 
 import { useState, useEffect } from 'react'
 

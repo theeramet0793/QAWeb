@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import '../../Css/Comment.css'
+import '../../Css/Comment/Comment.css'
 
 const Comment = (prop) =>{
 

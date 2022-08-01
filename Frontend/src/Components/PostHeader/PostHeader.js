@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../../Css/PostHeader.css'
+import '../../Css/PostHeader/PostHeader.css'
 
 
 

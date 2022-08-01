@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import '../../Css/AllPost.css'
+import '../../Css/PostType/AllPost.css'
 import Post from '../Post/Post'
 
 const AllPost = () =>{

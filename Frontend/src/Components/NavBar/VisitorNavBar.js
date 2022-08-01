@@ -1,16 +1,16 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
-import '../../Css/VisitorNavBar.css'
+import '../../Css/NavBar/VisitorNavBar.css'
 
 const clickLogin = () =>{
-  window.location = "/signIn"
+  window.location = "/reg"
 }
 
 const VisitorNavBar = () => {
     return (
       
         <div>
-          <nav class="navbar fixed-top navbar-expand-lg " id="visitor-navbar">
+          <nav class="navbar sticky-top navbar-expand-lg " id="visitor-navbar">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

@@ -1,5 +1,6 @@
 
 import axios from "axios";
+import Test from './Registration'
 
 function IsSamePassword(password, repeatPassword){
   if(password === repeatPassword){
@@ -74,6 +75,7 @@ const SignUp = () =>{
           </div>
         </form>
       </div>
+      <Test/>
     </div>    
   )
 }

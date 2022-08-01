@@ -1,5 +1,5 @@
 
-import '../../Css/RightComponent.css'
+import '../../Css/SideBar/RightComponent.css'
 
 const RightComponent = () => {
         return(
