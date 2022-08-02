@@ -22,9 +22,16 @@
     height: 30px;
 }
 
-.commenter-detail{
-    font-size: small;
-    font-weight: 600;
-    color: #656769;
+.commenter-name{
+    color: #3e3c3c;
+    font-size: medium;
+    font-weight: 500;
 }
 
+.comment-createdAt{
+    font-size: small;
+    font-weight: 600;
+    margin-left: 3% ;
+    margin-right: 3% ;
+    color: #676666;
+}

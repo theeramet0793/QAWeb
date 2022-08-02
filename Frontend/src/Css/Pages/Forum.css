@@ -1,4 +1,9 @@
 
+.forum-page-container{
+   overflow: hidden;
+   min-height: 92vh;
+   background-color: #f5f4f4;
+}
 
 div.forum-top-trending-container{
     background-color: #ffffff;

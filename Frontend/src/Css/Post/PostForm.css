@@ -25,11 +25,12 @@
 
    button#btn-inputForm {
     width: 20%;
+    height: 2rem;
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #f48024;
+    margin-bottom: 5%;
+    background-color: #ff4554;
     color: #ffffff;
     border: none;
     border-radius: 999px;

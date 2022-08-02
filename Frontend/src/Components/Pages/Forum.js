@@ -4,13 +4,13 @@ import AllPost from '../PostType/AllPost'
 import FilterPost from '../Filter/FilterPost'
 import PostForm from '../Post/PostForm'
 import Hilight from '../TopTrend/Hilight'
-
+import '../../Css/Pages/Forum.css'
 import { useState, useEffect } from 'react'
 
 const Forum = () => {
     const [filter, setFilter] = useState(0)
     return(
-        <div className="main-container">
+        <div className="forum-page-container">
 
             <div className="forum-top-trending-container">
                     <Hilight/>

@@ -16,3 +16,23 @@
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
     margin: auto;
 }
+
+.write-comment:focus{
+    outline-color: #ff4554;
+}
+
+#cover-button-comment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-comment{
+    background-color: #ff4554;
+    color: #ffffff;
+    margin: 1%;
+    border-radius: 5px;
+    border: none;
+    width: 7rem;
+    height: 2rem;
+}

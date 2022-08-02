@@ -29,7 +29,8 @@ const Comment = (prop) =>{
                         </div>
                         <div className="comment-detail-container">
                             <div className="commenter-detail">
-                                {comment.CommenterName}
+                                <span className='commenter-name'>{comment.CommenterName}</span>
+                                <span className='comment-createdAt'>{comment.LastUpdate}</span>
                             </div>
                             <div className="comment-detail">
                                 {comment.CommentDetail}

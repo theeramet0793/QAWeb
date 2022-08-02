@@ -15,7 +15,7 @@ const deleteLocalStorage= async () =>{
 const UserNavBar = () => {
     return (
       <div className="topbar">
-        <nav class="navbar fixed-top navbar-expand-md border-buttom " id="user-navbar">
+        <nav class="navbar sticky-top navbar-expand-md border-buttom " id="user-navbar">
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggle-text"> Menu </span>
@@ -30,8 +30,8 @@ const UserNavBar = () => {
                 <img className="website-logo-image" src="/logo512.png" height="40" width="40" alt="logo"></img>
               </li>
               <li id="user-topnav-item" class="nav-item"><a class="nav-link text-nowrap" href="/forum">Forum</a></li>
-              <li id="user-topnav-item" class="nav-item"><a class="nav-link text-nowrap" href="/solvedPost">Discovery</a></li>
-              <li id="user-topnav-item" class="nav-item"><a class="nav-link text-nowrap" href="/posts">Community</a></li>
+              <li id="user-topnav-item" class="nav-item"><a class="nav-link text-nowrap" href="#">Discovery</a></li>
+              <li id="user-topnav-item" class="nav-item"><a class="nav-link text-nowrap" href="#">Community</a></li>
               <li id="user-topnav-item">
                   <input id="user-topnav-search" type="search" placeholder="Search" />
               </li>

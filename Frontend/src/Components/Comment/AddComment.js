@@ -30,8 +30,8 @@ const AddComment = (prop) => {
                 <div className="text-area-comment">
                     <textarea value={value.text} className="write-comment"  type="text" placeholder="  Write your comment here..." name="postform" onChange={handleTextInputChange}    />
                 </div>
-                <div id="cover-button1">
-                    <button id="btn-inputForm" type="submit" onClick={btnClick}>Comment</button>
+                <div id="cover-button-comment">
+                    <button id="btn-comment" type="submit" onClick={btnClick}>Comment</button>
                 </div> 
             </form>
         </div>
