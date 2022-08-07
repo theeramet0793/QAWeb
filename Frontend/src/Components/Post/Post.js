@@ -1,13 +1,12 @@
 import { useState } from "react";
-import Comment from "../Comment/comment";
 import AddComment from "../Comment/AddComment";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import CountComment from '../PostFooter/CountComment'
 import SortComment from "../PostFooter/SortComment";
 import FollowPost from "../PostFooter/FollowPost";
 import HideComment from "../PostFooter/HideComment";
 import PostHeader from "../PostHeader/PostHeader"
+import TextareaAutosize from 'react-textarea-autosize';
+import './Post.css'
 
 
 const Post = (prop) => {
@@ -29,9 +28,9 @@ const Post = (prop) => {
             </div>
 
             <div className="post-body">
-                <div className='post-postdetail-container'>
+                <TextareaAutosize className='post-postdetail-container' disabled>
                     {post.PostDetail}
-                </div>
+                </TextareaAutosize>
             </div>
 
             <div className="post-footer">
@@ -46,13 +45,10 @@ const Post = (prop) => {
 
             </div>
 
-            <div className="post-write-comment">
-                <AddComment postId={post.PostId} />
+            <div className="post-comment-section">
+                <AddComment post={post} />
             </div>
 
-            <div className="post-section-comment">
-                { !hideComment && <Comment postId={post.PostId} />}
-            </div>
         </div>
     )   
 }

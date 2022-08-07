@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './Comment.css'
+import TextareaAutosize from 'react-textarea-autosize';
 
 const Comment = (prop) =>{
 
@@ -11,10 +12,11 @@ const Comment = (prop) =>{
         axios.get('http://127.0.0.1:5000/GetComment/'+prop.postId)
         .then( res => {
             console.log('GetComment',res)
+            setComments(res.data)
         })
     }
 
-    useEffect( ()=>{ getComment()}, []);
+    useEffect( ()=>{ getComment()}, [prop.stateChanger]);
 
     return(
         <div>
@@ -29,9 +31,9 @@ const Comment = (prop) =>{
                                 <span className='commenter-name'>{comment.CommenterName}</span>
                                 <span className='comment-createdAt'>{comment.LastUpdate}</span>
                             </div>
-                            <div className="comment-detail">
+                            <TextareaAutosize className="comment-detail" disabled>
                                 {comment.CommentDetail}
-                            </div>
+                            </TextareaAutosize>
 
                         </div>
 

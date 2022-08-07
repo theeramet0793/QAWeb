@@ -35,3 +35,8 @@
     margin-right: 3% ;
     color: #676666;
 }
+
+.comment-detail{
+    width: 100%;
+    resize: none;
+}

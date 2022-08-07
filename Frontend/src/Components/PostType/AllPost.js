@@ -24,7 +24,6 @@ const AllPost = () =>{
                 return(
                     <Post post={post}/>
                 )      
-
             })}
         </div>
     )
