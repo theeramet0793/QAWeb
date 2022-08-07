@@ -1,7 +1,7 @@
 
 import {useState} from "react";
 import axios from "axios";
-import '../../Css/Comment/AddComment.css'
+import './AddComment.css'
 
 const AddComment = (prop) => {
 

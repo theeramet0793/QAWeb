@@ -55,8 +55,7 @@ const clickLogin = async () => {
     } )
     .then((response) => 
     {
-        console.log(response)
-        console.log(typeof(emailValue))
+        console.log('SignIn',response)
         if( response.data === 'failed'){
             LogInFailAlert();
         }else{

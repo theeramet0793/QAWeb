@@ -4,7 +4,7 @@ import AllPost from '../PostType/AllPost'
 import FilterPost from '../Filter/FilterPost'
 import PostForm from '../Post/PostForm'
 import Hilight from '../TopTrend/Hilight'
-import '../../Css/Pages/Forum.css'
+import './Forum.css'
 import { useState, useEffect } from 'react'
 
 const Forum = () => {
@@ -35,16 +35,16 @@ const Forum = () => {
 
 function selectedFilter (filter){
     console.log('filter=',filter)
-    if(filter==1)
+    if(filter===1)
         return(<div></div>)
     
-    if(filter==2)
+    if(filter===2)
         return(<div></div>)
     
-    if(filter==3)
+    if(filter===3)
         return(<AllPost/>)
     
-    if(filter==4)
+    if(filter===4)
         return(<PostForm/>)
     
 }

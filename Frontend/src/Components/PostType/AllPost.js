@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import '../../Css/PostType/AllPost.css'
+import './AllPost.css'
 import Post from '../Post/Post'
 
 const AllPost = () =>{
@@ -11,9 +11,8 @@ const AllPost = () =>{
     const getAllPost = () =>{
         axios.get('http://127.0.0.1:5000/GetAllPost')
         .then( res => {
-            console.log(res)
+            console.log('GetAllPost',res)
             setPosts(res.data)
-            console.log(posts)
         })
     }
 
@@ -22,7 +21,6 @@ const AllPost = () =>{
     return(
         <div>
             {posts.map( function(post){
-                
                 return(
                     <Post post={post}/>
                 )      

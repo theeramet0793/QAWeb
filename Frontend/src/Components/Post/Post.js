@@ -19,7 +19,7 @@ const Post = (prop) => {
         setHideComment(!hideComment)
     }
 
-    // console.log('post=',post)
+     console.log('post=',post)
 
     return(
         <div className="Post">

@@ -1,5 +1,5 @@
 
-import '../../Css/TopTrend/Hilight.css'
+import './Hilight.css'
 
 const Hilight = () =>{
     return (

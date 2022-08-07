@@ -1,6 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
-import '../../Css/NavBar/VisitorNavBar.css'
+import './VisitorNavBar.css'
 
 const clickLogin = () =>{
   window.location = "/reg"

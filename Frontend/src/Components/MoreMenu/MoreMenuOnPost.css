@@ -1,0 +1,29 @@
+
+.img-more-menu{
+    width: 28px;
+    height: 28px;
+}
+
+#btn-more-menu{
+    background-color: #FFFFFF;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-more-menu:hover, .btn-more-menu:focus{
+    background-color: aliceblue !important;
+    border-radius: 7px;
+}
+
+#more-menu-dropdown.dropdown-menu.show {
+    padding: 0%;
+}
+
+#more-menu-dropdown hr.dropdown-divider {
+    margin: 0%;
+}

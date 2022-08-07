@@ -2,7 +2,7 @@
 // อย่าลบบรรทัดนี้ มันจำเป็นต้องใช้ => import { Dropdown } from 'bootstrap'; 
 import { Dropdown } from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
-import '../../Css/NavBar/UserNavBar.css'
+import './UserNavBar.css'
 
 const deleteLocalStorage= async () =>{
   localStorage.removeItem('UID')
@@ -44,7 +44,7 @@ const UserNavBar = () => {
                       <img src="/images/profile-picture.png" className="profile-image" id="user-profile-image" height="35" width="35"/>
                   </button>
 
-                  <ul class="dropdown-menu " id="user-dropdown" aria-labelledby="user-navbar-dropdownMenuButton">
+                  <ul class="dropdown-menu dropdown-menu-end" id="user-dropdown" aria-labelledby="user-navbar-dropdownMenuButton">
                     <li><a class="dropdown-item" href="#"> {localStorage.getItem('UName')} </a></li>
                     <li><hr class="dropdown-divider"></hr></li>
                     <li><a class="dropdown-item" href="#">Edit profile</a></li>

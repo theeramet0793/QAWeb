@@ -1,9 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import * as Components from "./RegComponentStyle";
-import '../../Css/Registration/Registration.css'
-// import "./styles.css";
+import './Registration.css'
 
 const Registration = () =>{
     const [signIn, toggle] = React.useState(true);
@@ -23,7 +21,7 @@ const Registration = () =>{
            imageURL: "No URL",
         })
         .then( (response) => {
-            if(response.status == 200)
+            if(response.status === 200)
             {
                  window.alert("Sign Up success")
             }else{
@@ -43,8 +41,7 @@ const Registration = () =>{
         } )
         .then((response) => 
         {
-            console.log(response)
-            console.log(typeof(emailValue))
+            console.log('SignIn',response)
             if( response.data === 'failed'){
                 // LogInFailAlert();
             }else{

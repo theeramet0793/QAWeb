@@ -9,6 +9,11 @@ img.post-img-poster-profile{
     height: 40px;
 }
 
-div.post-header-img{
+.post-header-img{
     width: 10%;
+}
+
+.post-date{
+    display: flex;
+    align-items: center;
 }

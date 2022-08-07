@@ -1,19 +1,16 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import '../../Css/Comment/Comment.css'
+import './Comment.css'
 
 const Comment = (prop) =>{
 
-    console.log("Prop",prop)
     const [comments, setComments] = useState([])
 
     const getComment = () =>{
         axios.get('http://127.0.0.1:5000/GetComment/'+prop.postId)
         .then( res => {
-            console.log(res)
-            setComments(res.data)
-            console.log(comments)
+            console.log('GetComment',res)
         })
     }
 

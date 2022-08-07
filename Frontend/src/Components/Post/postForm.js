@@ -1,7 +1,7 @@
-import React,{Component} from 'react'
+import React from 'react'
 import {useState} from "react";
 import axios from "axios";
-import '../../Css/Post/PostForm.css'
+import './PostForm.css'
 
 const PostForm = () => {
 

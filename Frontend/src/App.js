@@ -1,4 +1,4 @@
-import './Css/App/App.css'
+import './App.css'
 import Forum from './Components/Pages/Forum'
 import Reg from './Components/Pages/Reg'
 import { Route, Routes } from 'react-router-dom';

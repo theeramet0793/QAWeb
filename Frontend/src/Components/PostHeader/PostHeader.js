@@ -1,9 +1,8 @@
 import { useState } from "react"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../../Css/PostHeader/PostHeader.css'
-
-
+import './PostHeader.css'
+import MoreMenuOnPost from "../MoreMenu/MoreMenuOnPost";
 
 const PostHeader = (prop) =>{
 
@@ -16,11 +15,15 @@ const PostHeader = (prop) =>{
             </div>
 
             <div className="post-header-name">
-                <Row className="post-user-name">{post.UserName}</Row>
-                <Row className='post-date'>{post.LastUpdate}</Row>
+                <Row className="justify-content-center">
+                    <Col md="auto" className="post-user-name">{post.UserName}</Col>
+                    <Col className='post-date'>{post.LastUpdate}</Col>
+                </Row>
+
             </div>
 
             <div className="post-header-icon">
+                <MoreMenuOnPost post={post}/>
             </div>
         </div>
     )
