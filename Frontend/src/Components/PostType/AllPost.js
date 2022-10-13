@@ -6,7 +6,9 @@ import Post from '../Post/Post'
 
 const AllPost = () =>{
 
-    const [posts, setPosts] = useState([])
+    let [posts, setPosts] = useState([])
+
+    useEffect( ()=>{ getAllPost()}, []);
 
     const getAllPost = () =>{
         axios.get('http://127.0.0.1:5000/GetAllPost')
@@ -16,13 +18,26 @@ const AllPost = () =>{
         })
     }
 
-    useEffect( ()=>{ getAllPost()}, []);
-    
+    const onDelete = (post) => {
+        var d = new Date()
+        
+            axios.post('http://127.0.0.1:5000/DeletePost',
+            {
+                postId: post.PostId,
+                deletedAt:  d.toDateString()+"  "+String(d.getHours())+":"+String(d.getMinutes())+":"+String(d.getSeconds()),
+            })
+            .then( res => {
+                console.log('DeletePost',res)
+                getAllPost()  
+            })
+
+    }
+
     return(
         <div>
-            {posts.map( function(post){
+            {posts && posts.map( function(post){
                 return(
-                    <Post post={post}/>
+                    <Post key={post.PostId} post={post} onDelete={onDelete}/>
                 )      
             })}
         </div>

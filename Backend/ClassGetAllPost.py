@@ -9,7 +9,7 @@ class GetAllPost(Resource):
     def get(self):
         connection = pymysql.connect(host='localhost', user='root', password='root',db='qadb')
         mycursor = connection.cursor()
-        mycursor.execute("SELECT TblPost.*, TblUser.UserName FROM TblPost JOIN TblUser On TblPost.PosterId = TblUser.UserId WHERE TblPost.IsDeleted = 0 ; ",)
+        mycursor.execute("SELECT TblPost.*, TblUser.UserId, TblUser.UserName FROM TblPost JOIN TblUser On TblPost.PosterId = TblUser.UserId WHERE TblPost.IsDeleted = 0 ; ",)
         selected_rows = mycursor.fetchall()
         connection.commit()
         connection.close()
@@ -32,7 +32,7 @@ class GetAllPost(Resource):
             d['LastUpdate'] = row[6]
             d['IsDeleted'] = row[7]
             d['DeletedAt'] = row[8]
-            d['UserName'] = row[9]
+            d['UserName'] = row[10]
             object_list.append(d)
         j = json.dumps(object_list)
         return json.loads(j)

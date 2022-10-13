@@ -23,7 +23,7 @@ const PostHeader = (prop) =>{
             </div>
 
             <div className="post-header-icon">
-                <MoreMenuOnPost post={post}/>
+                <MoreMenuOnPost post={post} onDelete={prop.onDelete}/>
             </div>
         </div>
     )

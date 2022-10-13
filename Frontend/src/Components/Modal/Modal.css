@@ -1,0 +1,19 @@
+.btn-close-modal{
+ background-color: #ff4554  !important;
+ outline: none;
+ border: none !important;
+}
+
+.btn-confirm-modal{
+    background-color: #22d974 !important;
+    outline: none;
+    border: none !important;
+}
+
+.btn-close-modal:hover{
+    opacity: 0.8;
+}
+
+.btn-confirm-modal:hover{
+    opacity: 0.8;
+}

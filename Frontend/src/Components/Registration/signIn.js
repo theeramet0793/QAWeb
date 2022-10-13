@@ -31,12 +31,12 @@ const handleKeyPress = async (event) =>{
       }
 }
 
-const clickLogin = async () => {
+const clickLogin = () => {
 
     resetAlert();
 
-    const emailValue = await document.getElementById("email").value;
-    const passwordValue = await document.getElementById("password").value;
+    const emailValue =  document.getElementById("email").value;
+    const passwordValue =  document.getElementById("password").value;
 
     if( emailValue == "" ){
         LogInNoEmailAlert();
@@ -63,7 +63,7 @@ const clickLogin = async () => {
             localStorage.setItem('UName',response.data['UName']);
             localStorage.setItem('URole',response.data['URole']);
             localStorage.setItem('accessToken',response.data['token']);
-            window.location = "/posts";     
+            window.location = "/forum";     
         }   
     }
     );
@@ -101,7 +101,7 @@ const SignIn = () =>{
                     </div>
 
                     <div className="container-button" >
-                        <div className="container-login-button"><button type="button" className="btn-submit-login" onClick={clickLogin} >Login</button></div>
+                        <div className="container-login-button"><button type="button" className="btn-submit-login" onClick={() => clickLogin()} >Login</button></div>
                     </div>
                     <div><a id="login-fail-alert">Email or password incorrect</a></div>
                     <div><a id="login-noEmail-alert">Please fill in your email</a></div>

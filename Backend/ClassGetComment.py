@@ -10,14 +10,15 @@ class GetComment(Resource):
         #connect to database
         connection = pymysql.connect(host='localhost', user='root', password='root',db='qadb')
         mycursor = connection.cursor()
-        mycursor.execute("SELECT TblComment.*, TblUser.UserName FROM TblComment Join TblUser On TblComment.CommenterId = TblUser.UserId WHERE PostId = %s",postId)
+        print(postId)
+        mycursor.execute("SELECT TblComment.*, TblUser.UserName FROM TblComment Join TblUser On TblComment.CommenterId = TblUser.UserId WHERE TblComment.PostId = %s AND TblComment.IsDeleted = 0;",postId)
         selected_rows = mycursor.fetchall()
         connection.commit()
         connection.close()
         #convert to json format
         rowarray_list = []
         for row in selected_rows:
-            t = (row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7])
+            t = (row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8])
             rowarray_list.append(t)
         json.dumps(rowarray_list)
 
@@ -31,7 +32,8 @@ class GetComment(Resource):
             d['CreatedAt'] = row[4]
             d['LastUpdate'] = row[5]
             d['IsDeleted'] = row[6]
-            d['CommenterName'] = row[7]
+            d['DeletedAt'] = row[7]
+            d['CommenterName'] = row[8]
             object_list.append(d)
         l = json.dumps(object_list)
         return json.loads(l)

@@ -24,7 +24,7 @@ const Post = (prop) => {
         <div className="Post">
             
             <div className="post-header"> 
-                <PostHeader post={post}/>
+                <PostHeader post={post}  onDelete={prop.onDelete}/>
             </div>
 
             <div className="post-body">
@@ -46,7 +46,7 @@ const Post = (prop) => {
             </div>
 
             <div className="post-comment-section">
-                <AddComment post={post} />
+                <AddComment post={post} hideComment={hideComment}/>
             </div>
 
         </div>

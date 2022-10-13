@@ -8,9 +8,10 @@ class DeleteComment(Resource):
     def post(self):
         data = json.loads(request.data)
         print(data)
+        true = '1'
         connection = pymysql.connect(host='localhost', user='root', password='root',db='qadb')
         mycursor = connection.cursor()
-        mycursor.execute("DELETE FROM TblComments WHERE cid = %s; ",(data['cid']))
+        mycursor.execute("UPDATE TblComment SET IsDeleted = %s, DeletedAt = %s WHERE CommentId = %s; ",(true, data['deletedAt'], data['commentId']))
         connection.commit()
         connection.close()  
         return 'Recieved'

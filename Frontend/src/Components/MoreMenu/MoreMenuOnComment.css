@@ -1,0 +1,17 @@
+
+#btn-more-menu-comment{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-more-menu-comment:hover, #btn-more-menu-comment:focus{
+    background-color: aqua;
+}
+
+#img-more-menu-on-comment{
+    width: 23px;
+    height: 23px;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from "react";
 import axios from "axios";
 import './PostForm.css'
+import TextareaAutosize from 'react-textarea-autosize';
 
 const PostForm = () => {
 
@@ -10,7 +11,6 @@ const PostForm = () => {
     
     const handleTextInputChange = (event) =>{
         setValue({...value, text: event.target.value})
-    
     }
     const btnClick = (event) =>{
           axios.post('http://127.0.0.1:5000/PostByUser ',
@@ -29,7 +29,14 @@ const PostForm = () => {
            
                 <form className="form-post" >
                     <div className="area-space">
-                        <textarea value={value.text} className="inputForm"  type="text" placeholder="Type your post here..." name="postform" onChange={handleTextInputChange}    />
+                        <TextareaAutosize
+                            value={value.text} 
+                            className="inputForm"  
+                            type="text" 
+                            placeholder="Type your post here..." 
+                            name="postform" 
+                            onChange={handleTextInputChange}
+                        />
                     </div>
                     <div id="cover-button">
                         <button id="btn-inputForm" type="submit" onClick={btnClick} >Post now</button>
